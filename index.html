@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой Telegram канал</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseSlow {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-fade-in-up { animation: fadeInUp 1s ease forwards; }
+    .animate-fade-in-down { animation: fadeInDown 1s ease forwards; }
+    .animate-pulse-slow { animation: pulseSlow 2s infinite; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex items-center justify-center min-h-screen">
+
+  <main class="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full text-center">
+    <!-- Круглое фото -->
+    <img src="https://via.placeholder.com/150" alt="Фото" 
+         class="w-32 h-32 rounded-full mx-auto shadow-md opacity-0 animate-fade-in-down">
+
+    <!-- Заголовок -->
+    <h1 class="text-2xl font-bold mt-6 opacity-0 animate-fade-in-up" style="animation-delay: .3s;">
+      Название канала
+    </h1>
+
+    <!-- Описание -->
+    <p class="text-gray-600 mt-4 opacity-0 animate-fade-in-up" style="animation-delay: .6s;">
+      Здесь вы найдете полезные материалы, новости и интересные факты. Подписывайтесь, чтобы быть в курсе!
+    </p>
+
+    <!-- Кнопка -->
+    <a href="https://t.me/your_channel" target="_blank" 
+       class="inline-block mt-6 px-8 py-3 bg-gradient-to-r from-blue-600 to-sky-400 text-white font-bold rounded-full shadow-lg hover:scale-105 hover:shadow-blue-400/60 transition transform animate-pulse-slow opacity-0 animate-fade-in-up" 
+       style="animation-delay: .9s;">
+      🚀 Перейти в Telegram
+    </a>
+  </main>
+
+</body>
+</html>
